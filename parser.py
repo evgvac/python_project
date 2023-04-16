@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-url = 'https://yandex.com.am/weather/?via=hl'
+url = 'https://yandex.com.am/weather/?lat=55.85995102&lon=37.12044525'
 
 response = requests.get(url)
 #print(response)
