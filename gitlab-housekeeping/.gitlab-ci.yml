@@ -1,0 +1,13 @@
+image: python:3.11.1-alpine3.17
+
+before_script:
+  - python --version
+  - pip install requests python-gitlab
+
+run:
+  variables:
+    #CI_DEBUG_TRACE: "true"
+  script:
+    - python find_two_last_snapshot.py
+    - python find_duplicates.py 432 258 467 439 493 429
+
